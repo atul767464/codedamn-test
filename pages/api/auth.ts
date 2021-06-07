@@ -1,7 +1,8 @@
 import dbConnect from "../../utils/dbConnect";
 import User from "../../models/user";
+import { NextApiRequest, NextApiResponse } from "next";
 
-export default async function handler(req, res) {
+export default async function handler(req:NextApiRequest, res:NextApiResponse) {
   try {
     const { method, body } = req;
     console.log("🚀 ~ file: auth.ts ~ line 6 ~ handler ~ body", body);
